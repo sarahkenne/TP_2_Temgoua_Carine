@@ -1,15 +1,20 @@
-const express = require("express")
+require("dotenv").config();
+const express = require("express");
+const connectDB = require("./config/db");
+const usersRoutes = require("./routes/users");
+const errorHandler = require("./middlewares/errorHandler");
 
-const app = express()
+const app = express();
 
-const usersRoutes = require("./routes/users")
+app.use(express.json());
 
-app.use(express.json())
+app.use("/api/users", usersRoutes);
+app.use(errorHandler);
 
-app.use("/api/users", usersRoutes)
+const PORT = process.env.PORT || 3001;
 
-const PORT = 3001
-
-app.listen(PORT, () => {
-console.log(`Server running on port ${PORT}`)
-})
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+});
