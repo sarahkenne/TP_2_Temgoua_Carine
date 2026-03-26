@@ -1,0 +1,254 @@
+{
+  "info": {
+    "_postman_id": "01f9aed2-85df-46ec-aad1-cfe023b0858f",
+    "name": "TP3-Test_Postman",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44291174",
+    "_collection_link": "https://go.postman.co/collection/44291174-01f9aed2-85df-46ec-aad1-cfe023b0858f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Afficher Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ajouter un nouvel user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Carine Temgoua\",\r\n  \"email\": \"carine@example.com\",\r\n  \"role\": \"user\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Rechercher un user via son id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Carine Temgoua\",\r\n  \"email\": \"carine@example.com\",\r\n  \"role\": \"user\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/69c52c8ae8c56073d6470f37",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "69c52c8ae8c56073d6470f37"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Modifier un champs d'un user",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/69c52c8ae8c56073d6470f37",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "69c52c8ae8c56073d6470f37"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ReAfficher les users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Supprimer un user",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/69c52c8ae8c56073d6470f37",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "69c52c8ae8c56073d6470f37"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "afficher un user supprimé",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/69c52c8ae8c56073d6470f37",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "69c52c8ae8c56073d6470f37"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Pagination",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Test search user",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/api/users?search=ali",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "ali"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Erreur email",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test\",\r\n  \"email\": \"alice@example.com\",\r\n  \"role\": \"user\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

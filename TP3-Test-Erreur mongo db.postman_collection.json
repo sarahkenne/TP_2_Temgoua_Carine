@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "347165fa-8533-4f49-add3-09c5bf8b9d67",
+    "name": "TP3-Test-Erreur mongo db",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44291174",
+    "_collection_link": "https://go.postman.co/collection/44291174-347165fa-8533-4f49-add3-09c5bf8b9d67?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Post avec email existant",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test user\",\r\n  \"email\": \"jean@example.com\",\r\n  \"role\": \"user\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get ID invalid",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get ID valid mais inexistant",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/000000000000000000000000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "000000000000000000000000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Put ID Invalid",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE ID Invalid",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Test Persistance",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test user\",\r\n  \"email\": \"test@example.com\",\r\n  \"role\": \"user\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Test Persistance",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"temgoua@example.com\",\r\n  \"role\": \"admin\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/api/users/69c5866acc37359d41bb34f5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3001",
+          "path": [
+            "api",
+            "users",
+            "69c5866acc37359d41bb34f5"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
