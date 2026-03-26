@@ -18,6 +18,4 @@ http://localhost:3001
 
 ## Tester l'API
 
-Importer la collection Postman :
-
-TP2-CarineTEMGOUA.postman_collection
+Importer les collections Postman
