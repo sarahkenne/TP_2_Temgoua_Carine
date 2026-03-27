@@ -48,7 +48,7 @@ function App() {
         setUsers((prev) => [...prev, newUser])
       }
     } catch (err) {
-      setError("Erreur lors de l'opération")
+      setError("Email déja utilisé")
       throw err
     }
   }
