@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #4dcfd3;
+  color: white;
+  padding: 20px;
+}
+
+.navbar h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+}
+
+.navbar p {
+  margin: 0;
+}
+.user-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.user-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.user-card p {
+  margin: 8px 0;
+}
+
+.role-admin {
+  color: #b91c1c;
+  font-weight: bold;
+}
+
+.role-user {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.user-card button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dc2626;
+  color: white;
+  cursor: pointer;
+}
+
+.user-card button:hover {
+  opacity: 0.9;
+}
+.info-message {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.error-message {
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.user-form {
+  max-width: 500px;   
+  margin: 20px auto;  
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.user-form h2 {
+  margin: 0 0 10px 0;
+}
+
+.user-form input,
+.user-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.user-form button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.user-form button:hover {
+  opacity: 0.9;
+}
